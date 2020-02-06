@@ -88,8 +88,6 @@
 
 				// -------内边缘高光部分
 				float rimDot = 1 - dot(viewDir, normal);
-				// We only want rim to appear on the lit side of the surface,
-				// so multiply it by NdotL, raised to a power to smoothly blend it.
 				//让边缘高光只出现在边边处
 				float rimIntensity = rimDot * pow(NdotL, _RimThreshold);
 				//平滑交界处
